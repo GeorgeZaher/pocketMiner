@@ -3,10 +3,7 @@ name: arm64aws_build
 ## self runner C++ build hosted on AWS Arm64
 ## see: https://github.com/marketplace/actions/build-c-project
 
-on: 
-    schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  "*/2 * * * *"
+on: [push]
     
 jobs:
   project-build:
