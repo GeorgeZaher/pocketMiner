@@ -7,7 +7,7 @@ on: [push]
     
 jobs:
   project-build:
-    runs-on: self-hosted # self-hosted runner on AWS
+    runs-on: 
     steps:
 
     - name: 1. Show CPU Architecture
